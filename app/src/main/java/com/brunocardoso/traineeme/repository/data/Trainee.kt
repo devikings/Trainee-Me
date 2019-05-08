@@ -1,4 +1,4 @@
-package com.brunocardoso.traineeme.models
+package com.brunocardoso.traineeme.repository.data
 
 import android.arch.persistence.room.*
 

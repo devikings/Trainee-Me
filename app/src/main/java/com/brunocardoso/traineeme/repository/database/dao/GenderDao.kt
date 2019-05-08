@@ -1,7 +1,8 @@
-package com.brunocardoso.traineeme.dao
+package com.brunocardoso.traineeme.repository.database.dao
 
 import android.arch.persistence.room.*
-import com.brunocardoso.traineeme.models.Gender
+import com.brunocardoso.traineeme.repository.data.Gender
+import io.reactivex.Single
 
 @Dao
 interface GenderDao {
@@ -19,6 +20,9 @@ interface GenderDao {
     fun getGenderByName(name: String): List<Gender>
 
     @Query("SELECT * FROM Gender")
-    fun getGenders(): List<Gender>
+    fun getGenders(): Single<List<Gender>>
+
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    fun insertAll(genders: List<Gender>)
 
 }

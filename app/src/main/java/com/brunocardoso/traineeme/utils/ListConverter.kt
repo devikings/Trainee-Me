@@ -1,7 +1,7 @@
 package com.brunocardoso.traineeme.utils
 
 import android.arch.persistence.room.TypeConverter
-import com.brunocardoso.traineeme.models.Exercise
+import com.brunocardoso.traineeme.repository.data.Exercise
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.util.*
